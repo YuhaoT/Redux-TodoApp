@@ -3,7 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "engines": {
-    "node": "14.17.3"
+    "node": "18.16.3",
+    "npm": "9.5.1"
   },
   "type": "commonjs",
   "scripts": {
