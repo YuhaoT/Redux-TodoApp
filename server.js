@@ -5,7 +5,7 @@ const app = express();
 
 const assetsRouter = require("./server/assets-router");
 
-app.use("/", express.static(path.join(__dirname, "dist")));
+app.use("/", express.static(path.join(__dirname)));
 app.use("/src", assetsRouter);
 
 app.get("/api/v1", (req, res) => {
@@ -16,7 +16,7 @@ app.get("/api/v1", (req, res) => {
 });
 
 app.get("/*", (_req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
+  res.sendFile(path.join(__dirname, "index.html"));
 })
 
 const { PORT = 5000 } = process.env;
