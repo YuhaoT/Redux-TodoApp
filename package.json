@@ -5,14 +5,17 @@
   "engines": {
     "node": "14.17.3"
   },
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently 'vite' 'nodemon server.js'",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "proxy": "http://localhost:5000",
   "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1"
@@ -26,8 +29,14 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.1",
+    "nodemon": "^3.0.1",
     "postcss": "^8.4.26",
     "tailwindcss": "^3.3.3",
     "vite": "^4.4.0"
-  }
+  },
+  "main": "postcss.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
